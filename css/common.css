@@ -204,7 +204,7 @@ nav{
     color: #E02E22;
 }
 nav .submenu{
-    width: 400px;
+    width: 450px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
