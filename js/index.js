@@ -10,6 +10,18 @@ let popup = document.querySelector('.popup'),
         document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
     }
 
+let link_event = document.querySelector("header .popup .popup_event"),
+    link_footer = document.querySelector("header .popup .popup_footer"),
+    section_event = document.querySelector("section.event"),
+    section_footer = document.querySelector("footer");
+
+link_event.addEventListener("click", e=>{
+    window.scrollTo({top: section_event.offsetTop, behavior:"smooth"});
+});
+link_footer.addEventListener("click", e=>{
+    window.scrollTo({top: section_footer.offsetTop, behavior:"smooth"});
+});
+
 //쿠키확인하기      
 function checkCookie(name){
     let cookieArr = document.cookie.split(';');                   
@@ -437,11 +449,15 @@ document.querySelector(".reservation").addEventListener("click", (e)=>{
     random_ad();
     modal_wrap.classList.toggle("hidden");
 });
-document.querySelector(".btn_Buymovie").addEventListener("click", (e)=>{
-    e.preventDefault();
-    random_ad();
-    modal_wrap.classList.toggle("hidden");
-});
+
+
+for(i of document.querySelectorAll(".btn_Buymovie")){
+    i.addEventListener("click", (e)=>{
+        e.preventDefault();
+        random_ad();
+        modal_wrap.classList.toggle("hidden");
+    })
+};
 
 
 /* --------------- section_sideadvertisement --------------- */

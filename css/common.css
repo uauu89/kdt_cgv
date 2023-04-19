@@ -109,6 +109,9 @@ header .popup a:hover{
     text-decoration: underline;
 }
 
+header .popup p + p{
+    margin-top: 10px;
+}
 
 header .popup input{
     display: none;
@@ -118,6 +121,7 @@ header .popup label{
     padding-left: 26px;
     background: url("../img/checkbox.png") no-repeat 0 50%;
     float: right;
+    margin-top: 30px;
 }
 header .popup input:checked + label{
     background-image: url("../img/checkbox_checked.png")
